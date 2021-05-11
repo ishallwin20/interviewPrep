@@ -6,8 +6,10 @@ class CountPrime {
         int[] dp = new int[5000001];
         dp[0] = 1;
         dp[1] = 1;
-        for(int i = 2;i<(n/2 + 1);i++) {
+        int count = 0;
+        for(int i = 2;i<n;i++) {
             if(dp[i] == 0) {
+                count ++;
                 int maxScope = n / i;
                 for (int j = 2; j <= maxScope && i * j < n; j++) {
                     dp[i * j] = 1;
@@ -15,12 +17,12 @@ class CountPrime {
             }
         }
 
-        int count = 0;
+        /*int count = 0;
 
         for(int i=0;i<n;i++) {
             if(dp[i] == 0) count++;
         }
-
+*/
         return count;
     }
     public static void main(String[] args) {
