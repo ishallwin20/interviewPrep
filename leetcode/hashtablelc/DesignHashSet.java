@@ -9,7 +9,7 @@ public class DesignHashSet {
         System.out.println(myHashSet.contains(3));
         myHashSet.add(3);
         System.out.println(myHashSet.contains(3));
-        myHashSet.remove(3);
-        System.out.println(myHashSet.contains(3));
+        myHashSet.remove(2);
+        System.out.println(myHashSet.contains(2));
     }
 }

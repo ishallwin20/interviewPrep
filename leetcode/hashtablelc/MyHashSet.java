@@ -1,30 +1,36 @@
 package hashtablelc;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyHashSet {
-    private List<Integer> container;
+    private static final int KEY_RANGE = 10000;
+    private LinkedListBucket[] bucketArr;
+
 
     public MyHashSet() {
-        container = new ArrayList<Integer>();
+        bucketArr = new LinkedListBucket[KEY_RANGE];
+        for(int i = 0 ; i<KEY_RANGE ;i++) {
+            bucketArr[i] = new LinkedListBucket();
+        }
+    }
+
+    private int _hasher(int key) {
+        return key%KEY_RANGE;
     }
 
     public void add(int key) {
-        if(!container.contains(key)) container.add(key);
+        bucketArr[_hasher(key)].insert(key);
     }
 
     public void remove(int key) {
-        try {
-            container.remove(Integer.valueOf(key));
-        } catch (Exception e) {
-
-        }
+        bucketArr[_hasher(key)].remove(key);
     }
 
     /** Returns true if this set contains the specified element */
     public boolean contains(int key) {
-        return container.indexOf(key) == -1 ? false : true;
+        return bucketArr[_hasher(key)].contains(key);
     }
 
 }
