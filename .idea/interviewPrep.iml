@@ -5,6 +5,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/leetcode" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/multithreading-gfg" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/javaadvtraining" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/epi" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
