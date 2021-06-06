@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/javaadvtraining" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/epi" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/machineCoding" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/kotlin" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
